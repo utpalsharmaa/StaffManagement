@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Build",
+		"type": "shell",
+		"command": "g++",
+		"args": [
+		  "-std=c++0x",
+		  "-o",
+		  "make",
+		  "main.cpp",
+		  "src/hod.cpp",
+		  "src/staff.cpp",
+			"-arch",
+		  "arm64"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		}
+	  },
+	  {
+		"label": "Run",
+		"type": "shell",
+		"command": "${fileDirname}/${fileBasenameNoExtension}"
+	  }
+	]
+  }
+  
